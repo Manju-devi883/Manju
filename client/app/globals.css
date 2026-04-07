@@ -1,0 +1,114 @@
+:root {
+  --primary-color: #ff4757;
+  --primary-hover: #ff6b81;
+  --bg-color: #1e272e;
+  --card-bg: #2f3640;
+  --text-main: #f1f2f6;
+  --text-secondary: #ced6e0;
+  --success: #2ed573;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(255, 71, 87, 0.5);
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  color: var(--text-main);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(255, 71, 87, 0.2);
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-left: 4px;
+}
+
+.sos-btn {
+  width: 100%;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), #ff0000);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 71, 87, 0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: pulse 2s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sos-btn:active {
+  transform: scale(0.95);
+}
+
+.sos-btn:hover {
+  box-shadow: 0 0 30px rgba(255, 71, 87, 0.8);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(255, 71, 87, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 71, 87, 0); }
+}
+
+.status-msg {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.status-success {
+  color: var(--success);
+}
+
+.status-error {
+  color: var(--primary-color);
+}
